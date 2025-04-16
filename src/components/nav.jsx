@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { client } from '../sanityClient'; 
 
-const Nav = () => {
+export  default function Nav() {
   const [profiles, setProfiles] = useState([]);
 
   useEffect(() => {
@@ -29,4 +29,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+// Removed duplicate default export
