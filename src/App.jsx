@@ -1,21 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { Rollup } from 'vite'
-import { Route } from 'react-router-dom'
+import './App.css';
+import './styles/styles.scss';
+import Layout from './components/Layout';
+import { Route, Routes } from 'react-router-dom'
+import Home from './components/Home';
+import profilkort from './components/profilkort.jsx';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       
-      <Layout>
+      <Layout elements={<profilkort/>}>
     
       <Routes>
         <Route path='/' element={<Home/>}></Route>
-        <Route path='/:slug' element={<profiler/>}></Route>
+        <Route path="/category/:slug" element={<profilkort resources={profilkort}/>} />
+        <Route path="/category/:slug" element={<resources resources={profilkort}/>} />
       </Routes>
       </Layout>
     </>
