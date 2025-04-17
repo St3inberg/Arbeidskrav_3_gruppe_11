@@ -5,6 +5,7 @@ import './App.css'
 import { Rollup } from 'vite'
 import { Route } from 'react-router-dom'
 
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -15,7 +16,7 @@ function App() {
     
       <Routes>
         <Route path='/' element={<Home/>}></Route>
-        <Route path='/:slug' element={<profiler/>}></Route>
+        <Route path='/:slug' element={<Profilkort />}></Route>
       </Routes>
       </Layout>
     </>

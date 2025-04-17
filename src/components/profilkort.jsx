@@ -1,6 +1,7 @@
 
+import Arbidslogg from "./Arbidslogg";
 
-export default function profilkort()
+export default function Profilkort()
 {
 return(
     <>
@@ -17,6 +18,7 @@ return(
     </ul>
     </section>
     </article>
+    <Arbidslogg/>
     
     </>
 )
