@@ -1,63 +1,90 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 $dark-purple: #4a148c;
-$grey-bg:    #f5f5f5;
-$white:      #fff;
+$light-purple: #7c43bd;
+$grey-bg:     #f5f5f5;
+$white:       #fff;
+
+/* Reset & base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   background: $grey-bg;
+  color: #333;
 }
 
+/* Header & Nav */
 .site-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: $dark-purple;
-  color: $white;
   padding: 1rem 2rem;
 
   .logo {
     margin: 0;
     font-size: 1.5rem;
+    color: $white;
+  }
+
+  /* Nav sits here */
+  #nav {
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    
+    
+
+    a {
+      display: inline-block;
+      color: $white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      transition: background 0.2s, transform 0.1s;
+
+      &:hover {
+        background: $light-purple;
+        transform: translateY(-2px);
+      }
+    }
   }
 }
 
-#nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-  margin: 0;
-  padding: 0;
-}
-
-#nav a {
-  color: $white;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-#nav a:hover {
-  text-decoration: underline;
-}
-
+/* Main content wrapper */
 main {
   padding: 2rem;
 }
 
-.profilkort,
-.home {
+/* Home & Profile Card sections */
+.home,
+.profilkort {
   background: $white;
   padding: 2rem;
   border-radius: 8px;
   max-width: 800px;
   margin: 2rem auto;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-.profilkort img {
-  max-width: 200px;
-  border-radius: 8px;
-  display: block;
-  margin-bottom: 1rem;
+/* Profile image inside card */
+.profilkort {
+  img {
+    display: block;
+    max-width: 200px;
+    margin: 0 auto 1rem;
+    border-radius: 8px;
+  }
 }
