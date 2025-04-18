@@ -1,13 +1,11 @@
-// src/main.jsx
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App.jsx';
-import './components/styles.scss';   // ← your SCSS lives here
+import './components/styles.scss';  
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <App />
   </BrowserRouter>
 );
-
