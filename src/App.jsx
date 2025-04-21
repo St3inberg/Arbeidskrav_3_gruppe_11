@@ -4,19 +4,32 @@ import Layout     from './components/Layout.jsx';
 import Home       from './components/Home.jsx';
 import Profilkort from './components/profilkort.jsx';
 import './components/styles.scss';
-import { fetchAllPersoner } from './personerClient.js';
+import { fetchAllPersoner, fetchWorkLog, } from './personerClient.js';
 
 export default function App() {
 
   const [personer, setPersoner] = useState([]);
+  const [loggforing, setLoggforing] = useState([]);
+
   const getAllPersoner = async () => {
   const data = await fetchAllPersoner();
   setPersoner(data)
-
-  
 };
+
+
+
+  const getAllogger = async () => {
+    const data = await fetchWorkLog();
+    setLoggforing(data)
+    console.log(data)
+  }
+
+
+
 useEffect(() => {
     getAllPersoner();
+    getAllogger();
+    
   }, []);
 
   return (
