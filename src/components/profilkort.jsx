@@ -11,7 +11,7 @@ export default function Profilkort() {
     client
       .fetch(
         `*[_type=="personer" && productslug.current == $slug][0]{
-          personname, epost, biografi, interesser,
+          personname, biografi, interesser,
           "imageUrl": image.asset->url
         }`,
         { slug }
@@ -23,12 +23,12 @@ export default function Profilkort() {
   if (!profile) return <div>Loading…</div>;
 
   return (
-    <section className="profilkort">
+    <section className="profilside">
       <h2>{profile.personname}</h2>
       {profile.imageUrl && (
         <img src={profile.imageUrl} alt={profile.personname} />
       )}
-      <p><strong>Epost:</strong> {profile.epost}</p>
+      
       <p><strong>Bio:</strong> {profile.biografi}</p>
       <p>
         <strong>Interesser:</strong>{' '}

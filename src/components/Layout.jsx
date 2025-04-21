@@ -13,7 +13,8 @@ export default function Layout() {
         <Nav />
       </header>
       <main>
-        {<Outlet />}
+        <section id="flex-container">
+        {<Outlet />}</section>
       </main>
     </>
   );

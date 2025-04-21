@@ -2,13 +2,11 @@
 import { client } from "./sanityClient";
 
 export async function fetchAllPersoner() {
-  const data = await client.fetch(`*[_type == "personer"]{
-    _id,
-    personname,
-    epost,
-    image
-    
-  }`);
+  const data = await client.fetch(`*[_type=="personer" ]{
+          personname, epost,
+          "imageUrl": image.asset->url,
+          _id
+        }`);
   return data;
 }
 
