@@ -7,7 +7,7 @@ export default function Nav() {
 
   useEffect(() => {
     client
-      .fetch(`*[_type=="personer"]{ personname, productslug }`)
+      .fetch(`*[_type=="personer"]{ personname, productslug, _id}`)
       .then((data) => {
         console.log('Sanity fetched profiles:', data);
         setProfiles(data);
