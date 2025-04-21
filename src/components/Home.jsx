@@ -19,7 +19,7 @@ export default function Home({personer, loggforing}) {
     <h2>Arbeidslogg</h2>
           
     {loggforing?.map((loggForhome) => (
-      <Loggkort loggforing={loggforing}/>
+      <Loggkort loggForhome={loggForhome}  key={loggForhome._id}/>
     ))}
 
   </section>
