@@ -1,9 +1,22 @@
+import { typed } from "sanity";
+
 export const loggforing =  {
     name: 'loggforing',
     title: 'Arbeidslogg',
     type: 'document',
     fields: [
-        
+        {
+            name: 'Oppgaven',
+            title: 'oppgavenavn',
+            type: "string",
+
+        },
+        {
+            title: 'Kommentar',
+            name: 'kommentar',
+            type: 'array',
+            of: [{type: 'string'}]
+       },
         {
             name: 'navn',
             title: 'Navn',
@@ -14,15 +27,6 @@ export const loggforing =  {
             }],
             
            },
-       {
-            title: 'Kommentar',
-            name: 'kommentar',
-            type: 'array',
-            of: [{type: 'string'}]
-          
-        
-       },
-
        {
         name: 'dato',
         title: 'Dato',
