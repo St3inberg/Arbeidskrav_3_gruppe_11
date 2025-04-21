@@ -36,8 +36,8 @@ useEffect(() => {
     
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index element={<Home personer={personer}/>} />
-        <Route path="profile/:slug" element={<Profilkort />} />
+        <Route index element={<Home personer={personer} loggforing={loggforing}/>} />
+        <Route path="profile/:slug" element={<Profilkort  />} />
       </Route>
     </Routes>
    

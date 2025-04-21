@@ -1,11 +1,13 @@
 // src/components/Home.jsx
 import React, { useEffect, useState } from 'react';
-import { fetchAllPersoner } from '../personerClient.js';
 import Personer from "./Personer";
+import ArbidsLogg from './LoggHome';
+import LoggHome from './LoggHome';
 
 
 
-export default function Home({personer}) {
+
+export default function Home({personer, loggforing}) {
 
 
 
@@ -15,6 +17,8 @@ export default function Home({personer}) {
   {personer?.map((person) => (
         <Personer person={person} key={person._id} />
       ))}
+
+  <LoggHome/>
   
   </>
   )
