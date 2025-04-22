@@ -107,3 +107,73 @@ main {
     border-radius: 8px;
   }
 }
+
+
+.profilside {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.profilside__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.profilside__image {
+  width: 8rem;
+  height: 8rem;
+  object-fit: cover;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.profilside__info {
+  flex: 1;
+}
+
+.profilside__name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.profilside__bio {
+  margin-top: 0.5rem;
+}
+
+.profilside__interesser ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.25rem;
+  list-style-type: disc;
+}
+
+.arbeidslogg-container {
+  background: #f9fafb;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  overflow-x: auto;
+}
+
+.arbeidslogg-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #9ca3af;
+}
+
+.arbeidslogg-table th,
+.arbeidslogg-table td {
+  padding: 0.75rem;
+  border: 1px solid #9ca3af;
+  text-align: left;
+}
+
+.arbeidslogg-table thead {
+  background-color: #f3f4f6;
+}
+
+.arbeidslogg-table tbody tr:hover {
+  background-color: #f9fafb;
+}
