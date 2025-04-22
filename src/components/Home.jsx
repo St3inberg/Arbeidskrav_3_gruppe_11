@@ -12,12 +12,13 @@ export default function Home({personer, loggforing}) {
 
   return (
   <>
+  <section id="flex-container">
   <h1>Velkommen til forsiden!</h1>
   {personer?.map((person) => (
         <Personer person={person} key={person._id} />
       ))}
-
-<section>
+</section>
+<section >
     <h2>Arbeidslogg</h2>
           
     {loggforing?.map((loggForhome) => (
@@ -26,10 +27,7 @@ export default function Home({personer, loggforing}) {
 
   </section>
 
- 
 
-
-  
   </>
   )
 }
