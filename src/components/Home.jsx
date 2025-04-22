@@ -6,7 +6,7 @@ import Personer from "./Personer";
 
 
 
-export default function Home({personer, loggforing}) {
+export default function Home({personer}) {
 
 
 
@@ -17,7 +17,7 @@ export default function Home({personer, loggforing}) {
         <Personer person={person} key={person._id} />
       ))}
 
-  
+
   
   </>
   )
