@@ -11,7 +11,7 @@ export default function ProductCard({person, slug}) {
         <img src={person.imageUrl} alt={person.personname} />
       )}
         <h3 >{person.personname}</h3>
-       <p >{person.epost}</p>
+       <p>{person.epost}</p>
 
       </article>
     </Link>

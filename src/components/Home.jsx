@@ -1,12 +1,12 @@
 // src/components/Home.jsx
 import React, { useEffect, useState } from 'react';
 import Personer from "./profilkort";
+import Loggkort from './Loggkort';
 
 
 
 
-
-export default function Home({personer}) {
+export default function Home({personer, loggforing}) {
 
 
 
@@ -16,6 +16,17 @@ export default function Home({personer}) {
   {personer?.map((person) => (
         <Personer person={person} key={person._id} />
       ))}
+
+<section>
+    <h2>Arbeidslogg</h2>
+          
+    {loggforing?.map((loggForhome) => (
+      <Loggkort loggForhome={loggForhome} key={loggForhome._id}/>
+    ))}
+
+  </section>
+
+ 
 
 
   
