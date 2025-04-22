@@ -12,6 +12,8 @@ export default function Home({personer, loggforing}) {
 
   return (
 
+    <>
+<section id='flex-container'>
   {personer?.map((person) => (
         <Personer person={person} key={person._id} />
       ))}
