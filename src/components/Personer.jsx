@@ -1,10 +1,10 @@
 import { Link, useParams } from "react-router-dom";
 
-export default function ProductCard({person}) {
+export default function ProductCard({person, slug}) {
  
 
   return (
-    <Link to={"profile/:slug"}>
+    <Link to={`profile/${person.productslug.current}`}>
       
       <article className="profilkort">
       {person.imageUrl && (
