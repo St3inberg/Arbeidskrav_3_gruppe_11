@@ -13,9 +13,14 @@ export async function fetchAllPersoner() {
 }
 
 export async function fetchWorkLog() {
-  const data = await client.fetch(`*[_type=="loggforing"] {
-  dato, navn[]{_ref},
-    kommentar,
+  const data = await client.fetch(`
+    *[_type=="loggforing"] {
+  dato,
+    kommentar[0],
+    _id,
+      navn[0]->{
+    personname
+  },
 }`);
     return data;
 }
