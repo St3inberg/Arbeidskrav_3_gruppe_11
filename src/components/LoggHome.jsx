@@ -11,7 +11,7 @@ export default function LoggHome({loggforing}){
         <h2>Arbeidslogg</h2>
         
             {loggforing?.map((loggForhome) => (
-                <Loggkort loggforing={loggforing}/>
+                <Loggkort loggForhom={loggForhom}/>
             ))}
 
         </section>
