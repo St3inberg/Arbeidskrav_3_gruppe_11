@@ -1,6 +1,6 @@
 // src/components/Home.jsx
 import React, { useEffect, useState } from 'react';
-import Personer from "./Personer";
+import Personer from "./profilkort";
 
 
 
