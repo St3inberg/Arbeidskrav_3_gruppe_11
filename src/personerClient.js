@@ -5,8 +5,10 @@ export async function fetchAllPersoner() {
   const data = await client.fetch(`*[_type=="personer" ]{
           personname, epost,
           "imageUrl": image.asset->url,
-          _id
+          _id,
+          productslug
         }`);
+        
   return data;
 }
 
