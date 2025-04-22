@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Layout     from './components/Layout.jsx';
 import Home       from './components/Home.jsx';
-import Profilkort from './components/profilkort.jsx';
+import Profilkort from './components/ProfilSide.jsx';
 import './components/styles.scss';
 import { fetchAllPersoner, fetchWorkLog, } from './personerClient.js';
 
