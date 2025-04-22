@@ -22,7 +22,7 @@ export const loggforing =  {
             title: 'Navn',
             type: 'array',
             of: [{
-    type: 'reference',
+            type: 'reference',
             to: [{type: 'personer'}] //jeg finner categories i categories.js første name
             }],
             

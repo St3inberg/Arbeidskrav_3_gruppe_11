@@ -1,4 +1,4 @@
-export default function Loggkort({loggForhome}){
+export default function Loggkort({loggForhome }){
 
     const tester = ()=>{
         console.log("på loggkorte", loggForhome)
@@ -9,7 +9,7 @@ export default function Loggkort({loggForhome}){
 
         <article className="loggkort" >
             <p>{loggForhome.dato}</p>
-            <p>{loggForhome._rev}nave</p>
+            <p>{loggForhome.personname}</p>
             <p>{loggForhome.kommentar}</p>
         </article>
     )
