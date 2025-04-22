@@ -21,7 +21,8 @@ export default function App() {
   const getAllogger = async () => {
     const data = await fetchWorkLog();
     setLoggforing(data)
-    console.log(data)
+    console.log("om logg på home",data)
+
   }
 
 
